@@ -138,35 +138,40 @@ function App() {
   );
 
   useEffect(() => {
-    const observers = [];
+    const sections = visibleSections
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
 
-    visibleSections.forEach((id) => {
-      const section = document.getElementById(id);
-      if (!section) {
+    if (!sections.length) {
+      return undefined;
+    }
+
+    const handleScroll = () => {
+      const probeOffset = window.innerWidth <= 992 ? 84 : 96;
+      let currentSection = sections[0];
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= probeOffset && rect.bottom >= probeOffset) {
+          currentSection = section;
+        }
+      });
+
+      if (!currentSection) {
         return;
       }
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setActiveSection(id);
-              setNavTheme(section.dataset.navTheme || "dark");
-            }
-          });
-        },
-        {
-          threshold: 0.35,
-          rootMargin: "-10% 0px -35% 0px",
-        }
-      );
+      setActiveSection(currentSection.id);
+      setNavTheme(currentSection.dataset.navTheme || "dark");
+    };
 
-      observer.observe(section);
-      observers.push(observer);
-    });
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
 
     return () => {
-      observers.forEach((observer) => observer.disconnect());
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
     };
   }, [visibleSections]);
 

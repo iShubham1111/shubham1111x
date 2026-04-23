@@ -101,4 +101,12 @@
   .contact-card {
     padding: 30px 22px;
   }
+
+  .contact-value {
+    font-size: 18px;
+  }
+
+  .contact-card p {
+    font-size: 14px;
+  }
 }

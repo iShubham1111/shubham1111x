@@ -7,7 +7,8 @@ function About() {
         <div className="section-heading reveal" data-reveal>
           <span className="eyebrow">About</span>
           <h2>
-            Frontend precision with real-world <span className="gradient-text">WordPress delivery</span>
+            Frontend precision with real-world React and{" "}
+            <span className="gradient-text">WordPress delivery</span>
           </h2>
           <p>
             I focus on clean UI, structured layouts, and high-performance builds that feel polished on every screen.
