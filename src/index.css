@@ -1,0 +1,218 @@
+:root {
+  --color-primary: #069494;
+  --color-secondary: #7c3aed;
+  --color-bg-dark: #0a0a0a;
+  --color-surface-dark: #101317;
+  --color-surface-light: #f4f6f8;
+  --color-text-light: #f8fafc;
+  --color-text-dark: #111827;
+  --color-muted-dark: rgba(255, 255, 255, 0.7);
+  --color-muted-light: rgba(17, 24, 39, 0.7);
+  --gradient-primary: linear-gradient(135deg, #069494 0%, #7c3aed 100%);
+  --gradient-soft: linear-gradient(
+    135deg,
+    rgba(6, 148, 148, 0.18) 0%,
+    rgba(124, 58, 237, 0.2) 100%
+  );
+  --shadow-soft: 0 18px 60px rgba(5, 10, 18, 0.18);
+  --shadow-glow: 0 0 40px rgba(6, 148, 148, 0.2);
+  --border-dark: rgba(255, 255, 255, 0.09);
+  --border-light: rgba(17, 24, 39, 0.08);
+  --container-width: 1180px;
+  --section-space: 110px;
+  --navbar-height: 76px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--color-bg-dark);
+  color: var(--color-text-light);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main {
+  overflow: clip;
+}
+
+section {
+  position: relative;
+}
+
+.container {
+  width: min(100% - 32px, var(--container-width));
+}
+
+.section-shell {
+  padding: var(--section-space) 0;
+}
+
+.section-heading {
+  max-width: 640px;
+  margin-bottom: 56px;
+}
+
+.section-heading .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: var(--color-primary);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.section-heading .eyebrow::before {
+  content: "";
+  width: 42px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-family: "Inter Tight", sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.section-heading p {
+  margin: 18px 0 0;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-dark {
+  background:
+    radial-gradient(circle at top left, rgba(124, 58, 237, 0.12), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(6, 148, 148, 0.12), transparent 32%),
+    var(--color-bg-dark);
+}
+
+.section-light {
+  background: #ffffff;
+  color: var(--color-text-dark);
+}
+
+.section-gradient {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(6, 148, 148, 0.18), transparent 24%),
+    radial-gradient(circle at 75% 30%, rgba(124, 58, 237, 0.14), transparent 26%),
+    linear-gradient(180deg, #0c1218 0%, #0a0a0a 100%);
+}
+
+.panel {
+  border: 1px solid var(--border-dark);
+  background: rgba(16, 19, 23, 0.72);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-soft);
+}
+
+.panel-light {
+  border: 1px solid var(--border-light);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.primary-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.primary-link::after {
+  content: "↗";
+  font-size: 1rem;
+}
+
+.primary-link:hover {
+  color: #7df6ef;
+  transform: translateX(3px);
+}
+
+.primary-link.dark-link {
+  color: var(--color-text-dark);
+}
+
+.primary-link.dark-link:hover {
+  color: var(--color-secondary);
+}
+
+@media (max-width: 992px) {
+  :root {
+    --section-space: 88px;
+  }
+
+  .section-heading {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 68px;
+  }
+
+  .container {
+    width: min(100% - 24px, var(--container-width));
+  }
+
+  .section-heading p {
+    line-height: 1.7;
+  }
+}
