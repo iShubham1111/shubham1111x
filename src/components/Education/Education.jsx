@@ -21,17 +21,17 @@ const educationItems = [
 const certificationItems = [
   {
     title: "Diploma in Full-Stack Web Development",
-    subtitle: "TGC Animation and Multimedia",
+    subtitle: "TGC Animation and Multimedia, Delhi",
     meta: "Duration: 2024 - July 2025",
   },
   {
     title: "Tally Prime",
-    subtitle: "Professional Certification",
+    subtitle: "Data Smart Institute, Varanasi",
     meta: "Completed",
   },
   {
     title: "ADCA",
-    subtitle: "Data Smart Institute, Varanasi",
+    subtitle: "ICI Institute, Varanasi",
     meta: "Completed: 2023",
   },
 ];
