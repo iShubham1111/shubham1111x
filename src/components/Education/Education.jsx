@@ -27,12 +27,12 @@ const certificationItems = [
   {
     title: "Tally Prime",
     subtitle: "Data Smart Institute, Varanasi",
-    meta: "Completed",
+    meta: "Completed 2023",
   },
   {
     title: "ADCA",
     subtitle: "ICI Institute, Varanasi",
-    meta: "Completed: 2023",
+    meta: "Completed: 2022",
   },
 ];
 
