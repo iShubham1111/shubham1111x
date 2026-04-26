@@ -30,7 +30,7 @@ const certificationItems = [
     meta: "Completed: 2023",
   },
   {
-    title: "(ADCA) Advanced Diploma in Computer Applications",
+    title: "Advanced Diploma in Computer Applications",
     subtitle: "ICI Institute, Varanasi",
     meta: "Completed: 2022",
   },
