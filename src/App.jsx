@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
+import StackMarquee from "./components/StackMarquee/StackMarquee";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Education from "./components/Education/Education";
@@ -207,6 +208,7 @@ function App() {
       <Navbar links={navLinks} activeSection={activeSection} theme={navTheme} />
       <main>
         <Hero />
+        <StackMarquee />
         <About />
         <Skills />
         <Education />

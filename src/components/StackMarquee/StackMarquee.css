@@ -1,0 +1,100 @@
+.stack-marquee-section {
+  padding: 16px 0 24px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(6, 148, 148, 0.08), transparent 28%),
+    radial-gradient(circle at top right, rgba(124, 58, 237, 0.08), transparent 28%),
+    #0a0a0a;
+}
+
+.stack-marquee-shell {
+  position: relative;
+  padding: 8px 0;
+}
+
+.stack-marquee-fade {
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    transparent 100%
+  );
+}
+
+.stack-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: stackMarquee 34s linear infinite;
+  will-change: transform;
+}
+
+.stack-marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-right: 14px;
+}
+
+.stack-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 18px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    135deg,
+    rgba(6, 148, 148, 0.2),
+    rgba(124, 58, 237, 0.2)
+  );
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.98rem;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 10px 24px rgba(5, 10, 18, 0.14);
+}
+
+.stack-chip.is-italic {
+  font-style: italic;
+  color: rgba(244, 248, 255, 0.95);
+}
+
+@keyframes stackMarquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .stack-marquee-section {
+    padding: 10px 0 20px;
+  }
+
+  .stack-marquee-group {
+    gap: 10px;
+    padding-right: 10px;
+  }
+
+  .stack-chip {
+    min-height: 36px;
+    padding: 8px 15px;
+    font-size: 0.88rem;
+  }
+}
