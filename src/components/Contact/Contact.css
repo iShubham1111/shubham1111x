@@ -1,16 +1,10 @@
-.contact-card,
-.social-card {
-  border-radius: 30px;
-}
-
-.contact-card {
-  height: 100%;
-  padding: 34px 30px;
+.contact-section {
+  overflow: hidden;
 }
 
 .contact-label {
   display: inline-flex;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   color: #7df6ef;
   font-size: 0.82rem;
   font-weight: 500;
@@ -18,11 +12,176 @@
   text-transform: uppercase;
 }
 
+.social-hub-visual {
+  min-height: 520px;
+  padding: 26px;
+  border-radius: 34px;
+  overflow: hidden;
+}
+
+.social-stage {
+  position: relative;
+  min-height: 468px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at center, rgba(6, 148, 148, 0.08), transparent 38%),
+    radial-gradient(circle at 65% 35%, rgba(124, 58, 237, 0.08), transparent 42%),
+    rgba(255, 255, 255, 0.02);
+}
+
+.social-ring {
+  position: absolute;
+  inset: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ring-one {
+  width: 280px;
+  height: 280px;
+  border: 1px dashed rgba(125, 246, 239, 0.22);
+  animation: spinRing 22s linear infinite;
+}
+
+.ring-two {
+  width: 360px;
+  height: 360px;
+  border: 1px solid rgba(124, 58, 237, 0.12);
+  animation: spinRingReverse 28s linear infinite;
+}
+
+.social-core {
+  position: absolute;
+  inset: 50%;
+  width: 142px;
+  height: 142px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    inset 0 0 30px rgba(255, 255, 255, 0.03),
+    0 0 40px rgba(6, 148, 148, 0.12);
+  overflow: hidden;
+}
+
+.social-core-glow {
+  position: absolute;
+  inset: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(6, 148, 148, 0.9), rgba(124, 58, 237, 0.8));
+  filter: blur(20px);
+  opacity: 0.78;
+}
+
+.social-core span {
+  position: relative;
+  z-index: 1;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.floating-social {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 10px 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  color: rgba(255, 255, 255, 0.92);
+  box-shadow:
+    0 12px 28px rgba(3, 8, 16, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  animation: floatIcon 5.5s ease-in-out infinite;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.floating-social:hover {
+  transform: translateY(-4px);
+  border-color: rgba(125, 246, 239, 0.16);
+  box-shadow:
+    0 18px 34px rgba(3, 8, 16, 0.24),
+    0 0 24px rgba(6, 148, 148, 0.08);
+}
+
+.floating-social svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+
+.floating-social span {
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.floating-social.pos-one {
+  top: 58px;
+  left: 46px;
+}
+
+.floating-social.pos-two {
+  top: 96px;
+  right: 24px;
+}
+
+.floating-social.pos-three {
+  left: 36px;
+  bottom: 116px;
+}
+
+.floating-social.pos-four {
+  left: calc(50% - 76px);
+  bottom: 54px;
+}
+
+.floating-social.pos-five {
+  right: 42px;
+  bottom: 126px;
+}
+
+.contact-hub-card {
+  padding: 12px 8px 12px 22px;
+}
+
+.contact-hub-card h2 {
+  margin: 0;
+  font-family: "Inter Tight", sans-serif;
+  font-size: clamp(2rem, 3.3vw, 3.3rem);
+  line-height: 1.05;
+}
+
+.contact-hub-card p {
+  max-width: 560px;
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.8;
+}
+
+.contact-direct-links {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+
 .contact-value {
-  display: block;
+  display: inline-flex;
   width: fit-content;
   font-family: "Inter Tight", sans-serif;
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
   font-weight: 600;
   line-height: 1.15;
   transition:
@@ -30,83 +189,202 @@
     transform 0.3s ease;
 }
 
-.contact-value + .contact-value {
-  margin-top: 16px;
-}
-
 .contact-value:hover {
   color: #7df6ef;
   transform: translateX(3px);
 }
 
-.contact-card p {
-  margin: 28px 0 0;
-  color: rgba(255, 255, 255, 0.72);
-  line-height: 1.8;
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
 }
 
-.social-grid {
+.contact-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-weight: 500;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.contact-cta:hover {
+  transform: translateY(-2px);
+}
+
+.contact-cta.primary {
+  color: #071114;
+  background: linear-gradient(135deg, #7df6ef, #b994ff);
+  box-shadow: 0 14px 30px rgba(6, 148, 148, 0.18);
+}
+
+.contact-cta.secondary {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-link-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  height: 100%;
+  gap: 14px;
+  margin-top: 32px;
 }
 
-.social-card {
-  min-height: 168px;
-  padding: 24px;
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  gap: 16px;
+.contact-link-grid a {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition:
-    transform 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.social-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  border-color: rgba(125, 246, 239, 0.16);
-  box-shadow:
-    0 18px 42px rgba(5, 10, 18, 0.18),
-    0 0 28px rgba(6, 148, 148, 0.08);
+.contact-link-grid a:hover {
+  transform: translateY(-3px);
+  border-color: rgba(125, 246, 239, 0.14);
+  box-shadow: 0 16px 30px rgba(3, 8, 16, 0.18);
 }
 
-.social-card span {
-  display: inline-flex;
-  margin-bottom: 16px;
+.contact-link-grid span,
+.contact-link-grid small {
+  display: block;
+}
+
+.contact-link-grid span {
   font-family: "Inter Tight", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 600;
+  color: #ffffff;
 }
 
-.social-card p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.68);
-  line-height: 1.7;
+.contact-link-grid small {
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.64);
 }
 
-.social-card strong {
-  align-self: flex-end;
-  color: #7df6ef;
-  font-size: 0.95rem;
+@keyframes spinRing {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes spinRingReverse {
+  from {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@keyframes floatIcon {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 992px) {
+  .social-hub-visual {
+    min-height: 460px;
+  }
+
+  .social-stage {
+    min-height: 408px;
+  }
+
+  .contact-hub-card {
+    padding: 6px 0 0;
+  }
 }
 
 @media (max-width: 768px) {
-  .social-grid {
-    grid-template-columns: 1fr;
+  .social-hub-visual {
+    min-height: 400px;
+    padding: 18px;
   }
 
-  .contact-card {
-    padding: 30px 22px;
+  .social-stage {
+    min-height: 360px;
+  }
+
+  .ring-one {
+    width: 220px;
+    height: 220px;
+  }
+
+  .ring-two {
+    width: 290px;
+    height: 290px;
+  }
+
+  .social-core {
+    width: 116px;
+    height: 116px;
+  }
+
+  .floating-social {
+    min-height: 48px;
+    padding: 9px 12px;
+  }
+
+  .floating-social span {
+    font-size: 0.82rem;
+  }
+
+  .floating-social.pos-one {
+    top: 34px;
+    left: 14px;
+  }
+
+  .floating-social.pos-two {
+    top: 72px;
+    right: 10px;
+  }
+
+  .floating-social.pos-three {
+    left: 10px;
+    bottom: 96px;
+  }
+
+  .floating-social.pos-four {
+    left: calc(50% - 68px);
+    bottom: 28px;
+  }
+
+  .floating-social.pos-five {
+    right: 16px;
+    bottom: 102px;
+  }
+
+  .contact-link-grid {
+    grid-template-columns: 1fr;
   }
 
   .contact-value {
     font-size: 18px;
   }
 
-  .contact-card p {
+  .contact-hub-card p {
     font-size: 14px;
   }
 }

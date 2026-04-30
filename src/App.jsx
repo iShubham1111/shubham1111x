@@ -21,84 +21,95 @@ const navLinks = [
 
 const projectItems = [
   {
-    name: "TBX Academy - Multi-Page Website",
-    url: "https://tbxacademy.in/tbx-home/",
-    period: "Jan 2026 - Mar 2026",
-    type: "WordPress · Frontend",
+    name: "Techno Brainz",
+    url: "https://technobrainz.in/",
+    period: "Featured Project",
     summary:
-      "Developed a multi-page educational platform covering Home, About, Career, Projects, and Ecosystem experiences with structured layouts and responsive navigation.",
+      "A premium service-led website positioned as the lead showcase project, focused on polished presentation, strong structure, and conversion-ready clarity.",
+    stack: "WordPress / Ai - Powered Business Growth Agency ",
+    featured: true,
+    tall: true,
   },
   {
     name: "TBX Academy - Sales Funnel Website",
     url: "https://tbxacademy.in/",
     period: "Dec 2025 - Jan 2026",
-    type: "WordPress · Conversion Design",
     summary:
       "Built a focused sales funnel with clear content sequencing, sharp call-to-action placement, and responsive sections designed to improve conversions.",
+    stack: " Agency-styled ecosystem / UX / Conversion Design",
   },
   {
-    name: "GrowByte - Digital Marketing Website",
-    url: "https://growbyte.in/",
-    period: "Jan 2026 - Feb 2026",
-    type: "WordPress · Business Website",
+    name: "TBX Academy - Multi-Page Website",
+    url: "https://tbxacademy.in/tbx-home/",
+    period: "Jan 2026 - Mar 2026",
     summary:
-      "Designed and developed a modern marketing website centered on AI services, polished visual hierarchy, and responsive page structure.",
-  },
-  {
-    name: "MeriDelhi - Content/Article Website",
-    url: "https://meridelhi.in/",
-    period: "Feb 2026",
-    type: "WordPress · Editorial Platform",
-    summary:
-      "Created a content-first website with a cleaner reading experience, stronger information structure, and improved readability across devices.",
-  },
-  {
-    name: "Hasan Associate - Law Firm Website",
-    url: "https://hasanassociate.in/",
-    period: "Feb 2026",
-    type: "WordPress · Professional Services",
-    summary:
-      "Built a trust-focused law firm website with concise messaging, refined sections, and a clearer path to important service information.",
+      "Developed a multi-page educational platform covering Home, About, Career, Projects, and Ecosystem experiences with structured layouts and responsive navigation.",
+    stack: "WordPress / Frontend / Responsive Layouts",
   },
   {
     name: "Faizanwer - Professional Portfolio Website",
     url: "https://faizanwer.com/",
     period: "Apr 2026 - Present",
-    type: "Portfolio · In Progress",
     summary:
       "Developing a conversion-oriented personal brand website tailored for AI education, professional positioning, and digital transformation storytelling.",
+    stack: "Portfolio / Personal Brand / UI",
+    tall: true,
+  },
+  {
+    name: "GrowByte - Digital Marketing Website",
+    url: "https://growbyte.in/",
+    period: "Jan 2026 - Feb 2026",
+    summary:
+      "Designed and developed a modern marketing website centered on AI services, polished visual hierarchy, and responsive page structure.",
+    stack: "WordPress / Marketing / Business Website",
+  },
+  {
+    name: "Hasan Associates - Law Firm Website",
+    url: "https://hasanassociates.in/",
+    period: "Feb 2026",
+    summary:
+      "Built a trust-focused law firm website with concise messaging, refined sections, and a clearer path to important service information.",
+    stack: "Law / Trust Design / Services",
+  },
+  {
+    name: "MeriDelhi - Content/Article Website",
+    url: "https://meridelhi.in/",
+    period: "Feb 2026",
+    summary:
+      "Created a content-first website with a cleaner reading experience, stronger information structure, and improved readability across devices.",
+    stack: "Article / Editorial / Content Layouts",
   },
   {
     name: "My First Portfolio Website",
     url: "https://ishubham1111.github.io/myportfolio/",
     period: "Mar 2025",
-    type: "Portfolio · Frontend",
     summary:
       "Designed and launched an earlier portfolio website to present my frontend skills, design direction, and project selection.",
+    stack: "HTML / CSS / Frontend Presentation",
   },
   {
     name: "SK Movie - React Movie Website",
     url: "https://skmovie-web.netlify.app/",
     period: "Sep 2024 - Oct 2024",
-    type: "React · API Integration",
     summary:
       "Built a movie browsing experience in React and Vite with API-driven content, dynamic layouts, and responsive browsing flows.",
+    stack: "React / Vite / API Integration",
   },
   {
     name: "ShubhamCart11 - E-commerce Website",
     url: "https://shubhamcart11.netlify.app/",
     period: "Aug 2024 - Sep 2024",
-    type: "HTML · CSS · JavaScript",
     summary:
       "Created a foundational e-commerce project focused on product layouts, interactive shopping flows, and core frontend implementation.",
+    stack: "HTML / CSS / JavaScript / Jquery",
   },
   {
     name: "PlantZone - Frontend Project",
     url: "https://plantzone11.netlify.app/",
     period: "Apr 2024 - May 2024",
-    type: "Frontend · Beginner Project",
     summary:
       "An early frontend build focused on layout fundamentals, visual styling, and practical hands-on implementation of core web skills.",
+    stack: "Frontend / Layout Practice / UI Basics",
   },
 ];
 
