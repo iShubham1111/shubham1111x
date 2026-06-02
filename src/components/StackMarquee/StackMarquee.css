@@ -1,5 +1,5 @@
 .stack-marquee-section {
-  padding: 16px 0 24px;
+  padding: 18px 0 30px;
   overflow: hidden;
   background:
     radial-gradient(circle at top left, rgba(6, 148, 148, 0.08), transparent 28%),
@@ -9,33 +9,44 @@
 
 .stack-marquee-shell {
   position: relative;
-  padding: 8px 0;
+  padding: 10px 0;
 }
 
 .stack-marquee-fade {
   position: relative;
+  display: grid;
+  gap: 14px;
   overflow: hidden;
   -webkit-mask-image: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(0, 0, 0, 1) 10%,
-    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 1) 12%,
+    rgba(0, 0, 0, 1) 88%,
     transparent 100%
   );
   mask-image: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(0, 0, 0, 1) 10%,
-    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 1) 12%,
+    rgba(0, 0, 0, 1) 88%,
     transparent 100%
   );
 }
 
-.stack-marquee-track {
+.stack-marquee-row {
+  overflow: hidden;
+}
+
+.stack-marquee-row .stack-marquee-track {
   display: flex;
   width: max-content;
-  animation: stackMarquee 34s linear infinite;
+  animation: stackMarquee 30s linear infinite;
   will-change: transform;
+}
+
+.stack-marquee-row.is-reverse .stack-marquee-track {
+  animation-name: stackMarqueeReverse;
+  animation-duration: 32s;
 }
 
 .stack-marquee-group {
@@ -55,8 +66,8 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(
     135deg,
-    rgba(6, 148, 148, 0.2),
-    rgba(124, 58, 237, 0.2)
+    rgba(6, 148, 148, 0.18),
+    rgba(124, 58, 237, 0.18)
   );
   color: rgba(255, 255, 255, 0.92);
   font-size: 0.98rem;
@@ -72,6 +83,15 @@
   color: rgba(244, 248, 255, 0.95);
 }
 
+.stack-chip.is-highlighted {
+  border-color: rgba(125, 246, 239, 0.12);
+  background: linear-gradient(
+    135deg,
+    rgba(6, 148, 148, 0.24),
+    rgba(124, 58, 237, 0.22)
+  );
+}
+
 @keyframes stackMarquee {
   from {
     transform: translateX(0);
@@ -82,9 +102,23 @@
   }
 }
 
+@keyframes stackMarqueeReverse {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
 @media (max-width: 768px) {
   .stack-marquee-section {
-    padding: 10px 0 20px;
+    padding: 12px 0 22px;
+  }
+
+  .stack-marquee-fade {
+    gap: 10px;
   }
 
   .stack-marquee-group {
