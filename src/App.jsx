@@ -24,14 +24,19 @@ const projectItems = [
     name: "Techno Brainz",
     url: "https://technobrainz.in/",
     period: "Featured Project",
-    type: "Business Website - Video Feature",
+    type: "Business Website",
     summary:
       "A premium service-led website positioned as the lead showcase project, focused on polished presentation, strong structure, and conversion-ready clarity.",
-    mediaType: "video",
-    mediaSrc: "",
-    featured: true,
     tone: "purple",
-    size: "span-7",
+  },
+  {
+    name: "Technocrat United",
+    url: "https://technocratunited.com/",
+    period: "Client Website",
+    type: "WordPress + Bootstrap Theme + PHP",
+    summary:
+      "Delivered a clean professional website using WordPress, Bootstrap theming, and PHP customization for a polished business presence.",
+    tone: "teal",
   },
   {
     name: "TBX Academy - Multi-Page Website",
@@ -40,10 +45,7 @@ const projectItems = [
     type: "WordPress - Frontend",
     summary:
       "Developed a multi-page educational platform covering Home, About, Career, Projects, and Ecosystem experiences with structured layouts and responsive navigation.",
-    mediaType: "video",
-    mediaSrc: "",
     tone: "teal",
-    size: "span-5",
   },
   {
     name: "TBX Academy - Sales Funnel Website",
@@ -52,10 +54,16 @@ const projectItems = [
     type: "WordPress - Conversion Design",
     summary:
       "Built a focused sales funnel with clear content sequencing, sharp call-to-action placement, and responsive sections designed to improve conversions.",
-    mediaType: "video",
-    mediaSrc: "",
     tone: "purple",
-    size: "span-7",
+  },
+  {
+    name: "Delhi Bulletin Daily",
+    url: "https://delhibulletindaily.com/",
+    period: "News Platform",
+    type: "WordPress News/Magazine Website",
+    summary:
+      "Created a WordPress news and magazine website with organized content sections, readable article layouts, and a responsive publishing experience.",
+    tone: "neutral",
   },
   {
     name: "GrowByte - Digital Marketing Website",
@@ -64,10 +72,16 @@ const projectItems = [
     type: "WordPress - Business Website",
     summary:
       "Designed and developed a modern marketing website centered on AI services, polished visual hierarchy, and responsive page structure.",
-    mediaType: "image",
-    mediaSrc: "",
     tone: "teal",
-    size: "span-5",
+  },
+  {
+    name: "Faizanwer - Professional Portfolio Website",
+    url: "https://faizanwer.com/",
+    period: "Apr 2026 - Present",
+    type: "Portfolio - In Progress",
+    summary:
+      "Developing a conversion-oriented personal brand website tailored for AI education, professional positioning, and digital transformation storytelling.",
+    tone: "teal",
   },
   {
     name: "MeriDelhi - Content/Article Website",
@@ -77,7 +91,6 @@ const projectItems = [
     summary:
       "Created a content-first website with a cleaner reading experience, stronger information structure, and improved readability across devices.",
     tone: "neutral",
-    size: "span-4",
   },
   {
     name: "Hasan Associate - Law Firm Website",
@@ -87,19 +100,6 @@ const projectItems = [
     summary:
       "Built a trust-focused law firm website with concise messaging, refined sections, and a clearer path to important service information.",
     tone: "purple",
-    size: "span-4",
-  },
-  {
-    name: "Faizanwer - Professional Portfolio Website",
-    url: "https://faizanwer.com/",
-    period: "Apr 2026 - Present",
-    type: "Portfolio - In Progress",
-    summary:
-      "Developing a conversion-oriented personal brand website tailored for AI education, professional positioning, and digital transformation storytelling.",
-    mediaType: "image",
-    mediaSrc: "",
-    tone: "teal",
-    size: "span-4",
   },
   {
     name: "My First Portfolio Website",
@@ -109,7 +109,6 @@ const projectItems = [
     summary:
       "Designed and launched an earlier portfolio website to present my frontend skills, design direction, and project selection.",
     tone: "neutral",
-    size: "span-6",
   },
   {
     name: "SK Movie - React Movie Website",
@@ -119,7 +118,6 @@ const projectItems = [
     summary:
       "Built a movie browsing experience in React and Vite with API-driven content, dynamic layouts, and responsive browsing flows.",
     tone: "purple",
-    size: "span-6",
   },
   {
     name: "ShubhamCart11 - E-commerce Website",
@@ -128,10 +126,7 @@ const projectItems = [
     type: "HTML - CSS - JavaScript",
     summary:
       "Created a foundational e-commerce project focused on product layouts, interactive shopping flows, and core frontend implementation.",
-    mediaType: "profile.png",
-    mediaSrc: "",
     tone: "teal",
-    size: "span-5",
   },
   {
     name: "PlantZone - Frontend Project",
@@ -140,10 +135,7 @@ const projectItems = [
     type: "Frontend - Beginner Project",
     summary:
       "An early frontend build focused on layout fundamentals, visual styling, and practical hands-on implementation of core web skills.",
-    mediaType: "image",
-    mediaSrc: "",
     tone: "purple",
-    size: "span-7",
   },
 ];
 
