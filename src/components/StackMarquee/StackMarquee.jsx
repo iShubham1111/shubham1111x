@@ -7,24 +7,25 @@ const stackItems = [
   "jQuery",
   "React",
   "WordPress",
-  "Figma",
-  "Python",
+  "Shopify",
   "Bootstrap",
+  "PHP",
+  "Python",
   "MySQL",
   "Django",
+  "Figma",
+  "Canva",
 ];
 
 function MarqueeRow({ items, reverse = false }) {
-  const rowItems = [...items, ...items];
-
   return (
     <div className={`stack-marquee-row ${reverse ? "is-reverse" : ""}`}>
       <div className="stack-marquee-track">
         <div className="stack-marquee-group">
-          {rowItems.map((item, index) => (
+          {items.map((item) => (
             <span
-              className={`stack-chip ${index % 3 === 0 ? "is-italic" : ""} ${index % 5 === 0 ? "is-highlighted" : ""}`}
-              key={`${item}-${reverse ? "reverse" : "forward"}-${index}`}
+              className="stack-chip"
+              key={`${item}-${reverse ? "reverse" : "forward"}`}
             >
               {item}
             </span>
@@ -32,10 +33,10 @@ function MarqueeRow({ items, reverse = false }) {
         </div>
 
         <div className="stack-marquee-group" aria-hidden="true">
-          {rowItems.map((item, index) => (
+          {items.map((item) => (
             <span
-              className={`stack-chip ${index % 4 === 0 ? "is-italic" : ""} ${index % 6 === 0 ? "is-highlighted" : ""}`}
-              key={`${item}-${reverse ? "reverse-duplicate" : "forward-duplicate"}-${index}`}
+              className="stack-chip"
+              key={`${item}-${reverse ? "reverse-duplicate" : "forward-duplicate"}`}
             >
               {item}
             </span>

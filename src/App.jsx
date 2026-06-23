@@ -30,6 +30,15 @@ const projectItems = [
     tone: "purple",
   },
   {
+    name: "KartBharo",
+    url: "https://kartbharo.com/",
+    period: "June 2026",
+    type: "Ecommerce Website",
+    summary:
+      "Built using a fully custom Bootstrap theme with PHP, JavaScript, and WordPress. Focused on ecommerce experience, product presentation, performance, and responsive shopping flows.",
+    tone: "teal",
+  },
+  {
     name: "Technocrat United",
     url: "https://technocratunited.com/",
     period: "Client Website",
@@ -37,6 +46,24 @@ const projectItems = [
     summary:
       "Delivered a clean professional website using WordPress, Bootstrap theming, and PHP customization for a polished business presence.",
     tone: "teal",
+  },
+  {
+    name: "My X Factor",
+    url: "https://myxfactor.in/",
+    period: "June 2026",
+    type: "Brand Accessories Ecommerce Website",
+    summary:
+      "Built using a custom Bootstrap theme with PHP, JavaScript, and WordPress integration. Designed for mobile accessories, laptop accessories, electronics products, and modern ecommerce presentation.",
+    tone: "purple",
+  },
+  {
+    name: "Sarokar India",
+    url: "https://sarokarindia.in/",
+    period: "May 2026",
+    type: "News Website",
+    summary:
+      "Developed using WordPress, PHP, JavaScript, and a custom Bootstrap-based theme. Includes news publishing workflows, category-based content structure, and scalable editorial management.",
+    tone: "neutral",
   },
   {
     name: "TBX Academy - Multi-Page Website",
