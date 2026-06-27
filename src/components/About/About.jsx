@@ -7,8 +7,10 @@ function About() {
         <div className="section-heading reveal" data-reveal>
           <span className="eyebrow">About</span>
           <h2>
-            Frontend precision with real-world React and{" "}
-            <span className="gradient-text">WordPress delivery</span>
+            Full-stack development with{" "}
+            <span className="gradient-text">
+              React • WordPress • PHP • JavaScript • Python • Django
+            </span>
           </h2>
           <p>
             I focus on clean UI, structured layouts, and high-performance builds that feel polished on every screen.
@@ -19,18 +21,21 @@ function About() {
           <div className="col-lg-7">
             <div className="about-story reveal panel" data-reveal>
               <p>
-                I&apos;m Shubham Kushwaha, a frontend-focused developer with strong
-                experience in WordPress development.
+                I&apos;m Shubham Kushwaha, a full-stack web developer specializing in
+                React, WordPress, PHP, JavaScript, Python, Django, and custom
+                Bootstrap theme development.
               </p>
               <p>
-                I specialize in building responsive, high-performance, and
-                user-friendly websites. I have worked on real-world projects
-                including business websites, sales funnels, and content
-                platforms.
+                I build responsive, high-performance websites including business
+                websites, eCommerce stores, news portals, article platforms,
+                e-paper systems, sales funnels, portfolio websites, and custom
+                CMS solutions with a strong focus on clean architecture and user
+                experience.
               </p>
               <p>
-                I focus on clean UI, structured layouts, and performance
-                optimization.
+                My approach combines modern UI design, scalable development,
+                performance optimization, and custom-coded solutions to create
+                premium digital experiences.
               </p>
             </div>
           </div>

@@ -103,7 +103,7 @@ function Navbar({ links, activeSection, theme }) {
         </div>
 
         <div className="mobile-nav-footer">
-          <p>Frontend-focused developer crafting premium WordPress and React websites.</p>
+          <p>Creating responsive React applications, custom WordPress themes, and modern CMS-powered websites.</p>
         </div>
       </aside>
     </>

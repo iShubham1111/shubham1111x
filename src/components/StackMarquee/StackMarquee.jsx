@@ -1,48 +1,33 @@
 import "./StackMarquee.css";
 
 const stackItems = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "jQuery",
   "React",
   "WordPress",
-  "Shopify",
   "Bootstrap",
   "PHP",
+  "JavaScript",
   "Python",
-  "MySQL",
   "Django",
+  "MySQL",
+  "HTML",
+  "CSS",
+  "jQuery",
+  "REST API",
+  "WooCommerce",
+  "Shopify",
   "Figma",
   "Canva",
 ];
 
-function MarqueeRow({ items, reverse = false }) {
+function MarqueeItems({ items, duplicate = false }) {
   return (
-    <div className={`stack-marquee-row ${reverse ? "is-reverse" : ""}`}>
-      <div className="stack-marquee-track">
-        <div className="stack-marquee-group">
-          {items.map((item) => (
-            <span
-              className="stack-chip"
-              key={`${item}-${reverse ? "reverse" : "forward"}`}
-            >
-              {item}
-            </span>
-          ))}
-        </div>
-
-        <div className="stack-marquee-group" aria-hidden="true">
-          {items.map((item) => (
-            <span
-              className="stack-chip"
-              key={`${item}-${reverse ? "reverse-duplicate" : "forward-duplicate"}`}
-            >
-              {item}
-            </span>
-          ))}
-        </div>
-      </div>
+    <div className="stack-marquee-group" aria-hidden={duplicate ? "true" : undefined}>
+      {items.map((item) => (
+        <span className="stack-marquee-item" key={`${item}-${duplicate ? "duplicate" : "base"}`}>
+          <span className="stack-marquee-text">{item}</span>
+          <span className="stack-marquee-separator">✦</span>
+        </span>
+      ))}
     </div>
   );
 }
@@ -52,9 +37,11 @@ function StackMarquee() {
     <section className="stack-marquee-section section-dark">
       <div className="container">
         <div className="stack-marquee-shell">
-          <div className="stack-marquee-fade">
-            <MarqueeRow items={stackItems} />
-            <MarqueeRow items={stackItems} reverse />
+          <div className="stack-marquee-strip">
+            <div className="stack-marquee-track">
+              <MarqueeItems items={stackItems} />
+              <MarqueeItems items={stackItems} duplicate />
+            </div>
           </div>
         </div>
       </div>
