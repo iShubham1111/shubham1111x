@@ -8,9 +8,8 @@ function About() {
           <span className="eyebrow">About</span>
           <h2>
             Full-stack development with{" "}
-            <span className="gradient-text">
-              React • WordPress • PHP • JavaScript • Python • Django
-            </span>
+            <span className="about-tech-accent">React</span> and{" "}
+            <span className="about-tech-accent">WordPress</span> expertise
           </h2>
           <p>
             I focus on clean UI, structured layouts, and high-performance builds that feel polished on every screen.
@@ -22,8 +21,8 @@ function About() {
             <div className="about-story reveal panel" data-reveal>
               <p>
                 I&apos;m Shubham Kushwaha, a full-stack web developer specializing in
-                React, WordPress, PHP, JavaScript, Python, Django, and custom
-                Bootstrap theme development.
+                React, WordPress, CMS platforms, and custom Bootstrap theme
+                development.
               </p>
               <p>
                 I build responsive, high-performance websites including business

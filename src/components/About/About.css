@@ -5,6 +5,10 @@
     linear-gradient(180deg, #101820 0%, #0a0a0a 100%);
 }
 
+.about-tech-accent {
+  color: var(--color-primary);
+}
+
 .about-story,
 .highlight-card {
   border-radius: 28px;

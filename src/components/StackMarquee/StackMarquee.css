@@ -9,6 +9,8 @@
 
 .stack-marquee-shell {
   position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   min-height: 118px;
   display: flex;
   align-items: center;
@@ -29,13 +31,13 @@
 
 .stack-marquee-strip {
   position: relative;
-  left: -15%;
+  left: -3%;
   z-index: 1;
-  width: 130%;
+  width: 106%;
   height: 72px;
   overflow: hidden;
   border-radius: 16px;
-  transform: rotate(-4.5deg);
+  transform: rotate(-2.6deg);
   background: linear-gradient(135deg, rgba(18, 18, 18, 0.98), rgba(7, 8, 10, 0.98));
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -123,8 +125,8 @@
   }
 
   .stack-marquee-strip {
-    left: -22%;
-    width: 144%;
+    left: -4%;
+    width: 108%;
     height: 58px;
     border-radius: 14px;
   }
